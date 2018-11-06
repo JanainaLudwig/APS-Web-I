@@ -1,0 +1,36 @@
+@import url(https://fonts.googleapis.com/css?family=Neuton);body {
+  background-color: #f8f8f8;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.font-serif {
+  font-family: 'Neuton', serif;
+}
+
+.font-yellow {
+  color: #FDE541;
+}
+
+nav {
+  background-color: #1D1D1D;
+  color: white;
+  position: relative;
+  top: 0;
+  width: 100vw;
+}
+
+nav .navbar-toggler {
+  margin-right: 20px;
+}
+
+.pagination a,
+.pagination a:hover {
+  color: #31414e;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #FDE541;
+  border-color: #FDE541;
+  color: #31414e;
+}
+
