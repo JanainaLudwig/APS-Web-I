@@ -2,6 +2,14 @@
 
 Route::get('/', 'RecipesController@index');
 
+Route::get('/receitas', 'RecipesController@all');
+
+Route::get('/categoria/{category}', 'CategoryController@recipes');
+
+Route::get('/recipes/ingredients/{recipe}', 'RecipesController@ingredients');
+
+Route::get('/pesquisa/', 'RecipesController@search');
+
 Route::get('/recipes/{recipe}', 'RecipesController@show');
 
 Route::get('/create', 'RecipesController@create');
@@ -10,11 +18,12 @@ Route::post('/create', 'RecipesController@store');
 
 Route::post('/recipes/{recipe}/comment', 'CommentsController@store');
 
-//TODO: delete comment
 Route::get('/comments/delete/{comment}', 'CommentsController@delete');
 
 
 Route::get('/incomplete', 'TasksController@incomplete');
+
+Route::get('/categoria', 'CategoryController@all');
 
 
 Auth::routes();

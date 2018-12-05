@@ -4,40 +4,48 @@ $(document).ready(() => {
 
 
 function addNewIngredient() {
-    var number;
 
-    var quantityName = () => {
+    var quantityName = (number) => {
         return 'ingredient[' + number + '][quantity]';
     };
 
-    var measureName = () => {
+    var measureName = (number) => {
         return 'ingredient[' + number + '][measure]';
     };
 
-    var ingredientName = () => {
+    var ingredientName = (number) => {
         return 'ingredient[' + number + '][name]';
     };
 
     $('#newIngredient').on('click', () => {
         $(".ingredientForm").last().clone().appendTo($("#ingredients"));
+        ingredientsIndex();
+    });
 
-        let ingredientForm = $(".ingredientForm")[$(".ingredientForm").length - 1];
+    $('.remove-ingredient').each(function () {
+        console.log(this)
+        $(this).on('click', function () {
+            if ($('.ingredientForm').length == 1) return;
+           $(this).parent().parent().parent().parent().remove();
+           ingredientsIndex();
+        });
+    });
 
-        number = parseInt(ingredientForm.getAttribute('data-number')) + 1;
-        ingredientForm.setAttribute('data-number', number);
-
-        let quantity = $(ingredientForm).children('div')[0];
-        quantity = $(quantity).children('input')[0];
-        quantity.setAttribute('name', quantityName());
-        quantity.value = 1;
-
-        let measure = $(ingredientForm).children('div')[1];
-        measure = $(measure).children('select')[0];
-        measure.setAttribute('name', measureName());
-
-        let ingredient = $(ingredientForm).children('div')[2];
-        ingredient = $(ingredient).children('input')[0];
-        ingredient.setAttribute('name', ingredientName());
-        ingredient.value = '';
-    })
+    function ingredientsIndex() {
+        $(".ingredientForm").each(function (index) {
+            $($(this).find('input')[0]).attr('name', quantityName(index));
+            $($(this).find('input')[1]).attr('name', measureName(index));
+            $($(this).find('input')[2]).attr('name', ingredientName(index));
+        });
+        $('.remove-ingredient').each(function () {
+            console.log(this)
+            $(this).on('click', function () {
+                if ($('.ingredientForm').length == 1) return;
+                $(this).parent().parent().parent().parent().remove();
+                ingredientsIndex();
+            });
+        });
+    }
 }
+
+

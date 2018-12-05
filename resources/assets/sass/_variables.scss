@@ -1,16 +1,23 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Neuton');
+@import url('https://fonts.googleapis.com/css?family=Neuton|Parisienne');
 
 // Body
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-sans-serif: "Neuton", sans-serif;
+$font-neuton: "Neuton", sans-serif;
+$font-parisienne: 'Parisienne', cursive;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 // Colors
-$dark: #31414e;
+$main-light: #FFFBF9;
+$main-medium: #FFCDBB;
+$main-dark: #CB3803;
+$main-dark-transparent: rgba(203, 56, 3, 0.6);
+$gray-light: #ececec;
+
+$dark: #373d42;
 $dark-brown: #1D1D1D;
 $blue: #3490dc;
 $indigo: #6574cd;

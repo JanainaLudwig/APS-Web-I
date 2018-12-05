@@ -1,0 +1,65 @@
+.nav-margin {
+    margin-top: 75px;
+    @media(max-width: 768px) {
+        margin-top: 85px;
+    }
+}
+
+
+.font-small {
+    font-size: 16px;
+}
+
+.font-neuton {
+    font-family: $font-neuton;
+}
+
+.font-parisienne {
+    font-family: $font-parisienne;
+}
+
+.font-main-dark {
+    color: $main-dark;
+}
+
+.title {
+    font-size: 32px;
+    font-family: $font-parisienne;
+    color: $main-dark;
+}
+
+.title-big {
+    font-size: 38px;
+    font-family: $font-parisienne;
+    color: $main-dark;
+}
+
+.title-dark {
+    font-size: 32px;
+    font-family: $font-parisienne;
+    color: $dark;
+}
+
+.title-light {
+    font-size: 32px;
+    font-family: $font-parisienne;
+    color: $gray-light;
+}
+
+.form-flex {
+    display: flex !important;
+    width: 100%;
+}
+
+.btn-main-dark {
+    background-color: $main-dark;
+    color: $main-light;
+}
+
+@mixin opacity_transition($time) {
+    transition: opacity $time ease-in-out;
+    -moz-transition: opacity $time ease-in-out;
+    -webkit-transition: opacity $time ease-in-out;
+}
+
+

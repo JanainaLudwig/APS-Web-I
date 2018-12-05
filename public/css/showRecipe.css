@@ -1,7 +1,108 @@
-.scroll {
-    overflow-y: scroll;
+@import url(https://fonts.googleapis.com/css?family=Neuton|Parisienne);.nav-margin {
+  margin-top: 75px;
 }
 
-#commentsSection {
-    height: 100px;
+@media (max-width: 768px) {
+  .nav-margin {
+    margin-top: 85px;
+  }
 }
+
+.font-small {
+  font-size: 16px;
+}
+
+.font-neuton {
+  font-family: "Neuton", sans-serif;
+}
+
+.font-parisienne {
+  font-family: "Parisienne", cursive;
+}
+
+.font-main-dark {
+  color: #CB3803;
+}
+
+.title {
+  font-size: 32px;
+  font-family: "Parisienne", cursive;
+  color: #CB3803;
+}
+
+.title-big {
+  font-size: 38px;
+  font-family: "Parisienne", cursive;
+  color: #CB3803;
+}
+
+.title-dark {
+  font-size: 32px;
+  font-family: "Parisienne", cursive;
+  color: #373d42;
+}
+
+.title-light {
+  font-size: 32px;
+  font-family: "Parisienne", cursive;
+  color: #ececec;
+}
+
+.form-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  width: 100%;
+}
+
+.btn-main-dark {
+  background-color: #CB3803;
+  color: #FFFBF9;
+}
+
+.img-recipe-show {
+  width: 300px;
+  border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+  .img-recipe-show {
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 990px) {
+  #div-recipe-img {
+    padding: 0;
+  }
+}
+
+#related {
+  background-color: #373d42;
+}
+
+#related img {
+  width: 180px;
+  border-radius: 5px;
+}
+
+.img-related:hover img {
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+.img-related:not(:hover) img {
+  opacity: 0.5;
+  transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+.ingredient-used {
+  text-decoration: line-through;
+  color: #7b7b7b;
+}
+

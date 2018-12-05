@@ -1,0 +1,48 @@
+@import 'variables';
+@import "utils";
+
+.img-recipe-show {
+    width: 300px;
+    border-radius: 5px;
+    @media(max-width: 768px) {
+        width: 100%;
+        border-radius: 0;
+    }
+}
+
+#div-recipe-img {
+    @media(max-width: 990px) {
+        padding: 0;
+    }
+}
+
+
+#related {
+    background-color: $dark;
+
+    img {
+        width: 180px;
+        border-radius: 5px;
+    }
+}
+
+.img-related:hover {
+    img {
+        opacity: 1;
+        @include opacity_transition(.3s);
+    }
+}
+
+.img-related:not(:hover) {
+    img {
+        opacity: 0.5;
+        @include opacity_transition(.3s);
+    }
+}
+
+.ingredient-used {
+    text-decoration: line-through;
+    color: #7b7b7b;
+}
+
+

@@ -1,0 +1,24 @@
+nav {
+    padding: 20px;
+    font-family: $font-parisienne;
+    font-size: 25px;
+    background-color: $main-dark;
+    width: 100%;
+    a {
+        color: $main-light;
+        &:hover {
+            color: $main-medium;
+        }
+    }
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+        }
+        @media screen and (min-width: 990px){
+            li {
+                width: 20%;
+            }
+        }
+    }
+}

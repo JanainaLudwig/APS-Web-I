@@ -1,28 +1,29 @@
 // Variables
 @import 'variables';
+@import "utils";
+@import 'nav';
 
 body {
-  background-color: #f8f8f8;
-  font-family: 'Helvetica', sans-serif;
+  background-color: $main-light;
+  font-family: $font-neuton;
+  font-size: 18px;
 }
 
-.font-serif {
-  font-family: 'Neuton', serif;
+.navbar .navbar-collapse {
+    text-align: center;
 }
 
-.font-yellow {
-  color: $yellow;
+.site-title {
+    font-size: 35px;
 }
 
-nav {
-  background-color: $dark-brown;
-  color: white;
-  position: relative;
-  top: 0;
-  width: 100vw;
-  .navbar-toggler {
-    margin-right: 20px;
-  }
+
+.bg-gray-light {
+    background-color: $gray-light;
+}
+
+.bg-main-medium {
+    background-color: $main-medium;
 }
 
 .pagination {
@@ -32,9 +33,89 @@ nav {
   }
 
   .page-item.active .page-link {
-    background-color: $yellow;
-    border-color: $yellow;
-    color: $dark;
+    background-color: $main-dark;
+    border-color: $main-dark;
+    color: white;
   }
 }
 
+.recipe-card {
+    background-color: $main-medium;
+    &:hover {
+        background-color: lighten($main-medium, 5) !important;
+    }
+    a:hover {
+        text-decoration: none ;
+    }
+}
+
+.recipe-img {
+    width: 100%;
+    height: 100%;
+}
+
+.recipe-title {
+    font-size: 26px;
+}
+
+@media (max-width: 766px) {
+    .recipe-img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#search {
+    input {
+        width: 100%;
+        background: $main-dark-transparent;
+        border: 0;
+        border-radius: 50px 0 0 50px;
+        color: white;
+        font-size: 20px;
+        padding: 20px 5px 20px 15px;
+    }
+
+    i {
+        color: white;
+    }
+
+    button {
+        border: 0;
+        padding-right: 15px;
+        background-color: $main-dark-transparent;
+        height: 40px;
+        border-radius: 0 50px 50px 0;
+    }
+}
+
+#category {
+    padding: 20px;
+    $background-color: lighten($dark-brown, 20);
+    background-color: $background-color;
+    border-radius: 10px;
+
+    hr {
+        background-color: darken($gray-light, 50);
+        width: 70%;
+    }
+
+    .list-group-item {
+        background-color: $background-color !important;
+        border: none;
+        border-radius: 10px;
+        &:hover {
+            background-color: lighten($dark-brown, 10)!important;
+        }
+    }
+
+    a {
+         color: $gray-light;
+     }
+}
+
+footer {
+    height: 50px;
+    color: $main-light;
+    background-color: darken($main-dark, 5);
+}

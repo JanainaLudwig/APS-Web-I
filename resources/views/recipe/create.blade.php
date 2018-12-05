@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="text-center pt-3">
+    <div class="container nav-margin">
+        <div class="text-center title pt-3">
             <h2>Nova receita</h2>
         </div>
         <div class="row justify-content-center">
@@ -17,6 +17,16 @@
                     <div class="form-group">
                         <label class="h5" for="title">Nome: </label>
                         <input type="text" class="form-control" id="title" name="title">
+                    </div>
+                    <div class="form-group form-row">
+                        <div class="col-6">
+                            <label class="h5" for="yield">Rendimento: </label>
+                            <input type="text" class="form-control" id="title" name="yield">
+                        </div>
+                        <div class="col-6">
+                            <label class="h5" for="time">Tempo de preparo: </label>
+                            <input type="text" class="form-control" id="title" name="time">
+                        </div>
                     </div>
                     <div class="form-group">
                         <label class="h5" for="title">Foto: </label>
@@ -31,6 +41,14 @@
                         </div>
                     </div>
                     <div class="form-group">
+                        <label class="h5" for="time">Categoria: </label>
+                        <select id="inputState" class="form-control" name="category">
+                            @foreach($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label class="h5" for="body">Instruções: </label>
                         <textarea type="text" class="form-control" id="body" name="body"></textarea>
                     </div>
@@ -39,20 +57,11 @@
                         <div class="form-row ingredientForm py-2" data-number="0">
                             <div class="col-12 col-sm-6 col-lg-2">
                                 <label class="h6" for="body">Quantidade: </label>
-                                <input value="1" type="number" class="form-control" name="ingredient[0][quantity]">
+                                <input type="number" step=".25" class="form-control" name="ingredient[0][quantity]">
                             </div>
                             <div class="col-12 col-sm-6 col-lg-2">
                                 <label class="h6" for="body">Medido em: </label>
-                                <select class="custom-select mr-sm-2" id="" name="ingredient[0][measure]">
-                                    <option selected disabled>Escolha...</option>
-                                    <option value="Unidade(s)">Unidade(s)</option>
-                                    <option value="Grama(s)">Grama(s)</option>
-                                    <option value="Miligrama(s)">Miligrama(s)</option>
-                                    <option value="Colher(es) de sopa">Colher(es) de sopa</option>
-                                    <option value="Colher(es) de chá">Colher(es) de chá</option>
-                                    <option value="Xícara(s)">Xícara(s)</option>
-                                    <option value="Copo(s)">Copo(s)</option>
-                                </select>
+                                <input type="text" class="form-control" name="ingredient[0][measure]">
                             </div>
                             <div class="col">
                                 <label class="h6" for="body">Nome: </label>
@@ -61,7 +70,7 @@
                             <div class="col-1 pt-4 text-right">
                                 <span class="align-text-bottom">
                                     <button type="button" class="close" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
+                                        <span class="remove-ingredient" aria-hidden="true">&times;</span>
                                     </button>
                                 </span>
                             </div>

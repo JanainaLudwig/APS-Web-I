@@ -1,50 +1,32 @@
 @import "variables";
 
 header {
-  height: 80vh;
-  background: url("https://images.pexels.com/photos/76093/pexels-photo-76093.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940") no-repeat center;
+  height: 70vh;
+  background: url("../img/header.jpg") no-repeat center;
   background-size: cover;
-
-  div {
-    width: 100vw;
-  }
 }
 
-nav {
-  background-color: transparent !important;
-  color: white;
-  position: absolute !important;
-  top: 0;
-  width: 100vw;
-  .navbar-toggler {
-    margin-right: 20px;
-  }
-}
+.search-big {
+    padding-top: 35vh;
 
-.recipe-card {
-  background-color: white;
-  &:hover {
-    background-color: #fffed1 !important;
-  }
-  a:hover {
-    text-decoration: none ;
-  }
-}
+    input {
+        background: $main-dark-transparent;
+        border: 0;
+        border-radius: 50px 0 0 50px;
+        color: white;
+        font-size: 25px;
+        padding: 30px 10px 30px 15px;
+    }
 
-.recipe-img {
-  width: 100%;
-  height: 100%;
-}
+    i {
+        color: white;
+    }
 
-.recipe-title {
-  color: $dark;
-  font-size: 26px;
-}
-
-@media (max-width: 766px) {
-  .recipe-img {
-    width: 100%;
-    height: auto;
-  }
-
+    button {
+        border: 0;
+        padding-right: 25px;
+        background-color: $main-dark-transparent;
+        height: 60px;
+        border-radius: 0 50px 50px 0;
+    }
 }
