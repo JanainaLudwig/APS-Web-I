@@ -22,7 +22,7 @@
     @include('includes.navbar')
     @yield('content')
 
-    <footer class="p-2">
+    <footer class="p-2 mt-2">
         Copyrigth &copy; 2018 | TasteFood
     </footer>
 
